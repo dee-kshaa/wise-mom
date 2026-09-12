@@ -7,6 +7,6 @@ pytest==8.4.1
 httpx==0.28.1
 pandas==2.3.2
 python-dateutil==2.9.0.post0
-Pillow==11.3.0
+Pillow==12.3.0
 pytesseract==0.3.13
 openai==1.101.0
