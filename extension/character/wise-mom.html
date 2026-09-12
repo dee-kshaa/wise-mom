@@ -1,0 +1,43 @@
+<div class="wm-shell">
+  <div class="wm-controls">
+    <button class="wm-btn" data-action="minimize">_</button>
+    <button class="wm-btn" data-action="hide">×</button>
+  </div>
+
+  <div class="wm-bubble">Beta 👀 what are we buying?</div>
+
+  <div class="wm-character state-idle" id="wm-character" title="Drag me">
+    <div class="wm-head">
+      <div class="wm-bindi"></div>
+      <div class="wm-eyes">
+        <span class="eye"></span><span class="eye"></span>
+      </div>
+      <div class="wm-mouth"></div>
+    </div>
+    <div class="wm-body">
+      <div class="wm-sari"></div>
+      <div class="wm-arm wm-arm-left"></div>
+      <div class="wm-arm wm-arm-right"></div>
+    </div>
+  </div>
+
+  <div class="wm-indicator">₹<span id="wm-spending">0</span> spent today</div>
+
+  <div class="wm-panel hidden" id="wm-panel">
+    <h4>WISE MOM</h4>
+    <p id="wm-summary">You're doing okay today.</p>
+    <div class="wm-actions">
+      <button data-action="analyze">ASK MOM</button>
+      <button data-action="dismiss">CLOSE</button>
+    </div>
+  </div>
+
+  <div class="wm-blocker hidden" id="wm-blocker">
+    <div class="wm-blocker-title">WISE MOM</div>
+    <p id="wm-blocker-text">NOPE.</p>
+    <div class="wm-actions">
+      <button data-action="wait">WAIT</button>
+      <button data-action="dismiss-blocker">I'LL PUT IT BACK 😭</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+body { max-width: 600px; margin: 20px auto; font-family: Inter, Arial; background: #fffaf2; color: #282828; }
+label { display: block; margin: 10px 0; }
+input { width: 100%; box-sizing: border-box; padding: 8px; border-radius: 8px; border: 1px solid #dfd4b6; }
+button { margin-top: 10px; background: #f2ad2e; border: 0; padding: 10px 14px; border-radius: 8px; font-weight: 700; cursor: pointer; }

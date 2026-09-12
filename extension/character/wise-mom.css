@@ -1,0 +1,37 @@
+:host { all: initial; font-family: Inter, Arial, sans-serif; }
+.wm-shell { width: 230px; color: #2d2d2d; user-select: none; }
+.wm-controls { display: flex; justify-content: flex-end; gap: 6px; margin-bottom: 4px; }
+.wm-btn { width: 22px; height: 22px; border-radius: 50%; border: 0; cursor: pointer; background: #fff3d9; }
+.wm-bubble { background: #fff; border: 2px solid #f2ad2e; border-radius: 14px; padding: 10px; margin-bottom: 6px; box-shadow: 0 8px 20px rgba(0,0,0,.12); font-size: 13px; }
+.wm-character { width: 170px; margin: 0 auto; cursor: grab; transform-origin: bottom center; animation: breathe 2.8s ease-in-out infinite; }
+.wm-head { width: 80px; height: 80px; background: #f2c28b; border-radius: 45px; margin: 0 auto -8px; position: relative; border: 2px solid #9f6b35; }
+.wm-bindi { width: 10px; height: 10px; border-radius: 50%; background: #b10d2f; position: absolute; top: 10px; left: 50%; transform: translateX(-50%); }
+.wm-eyes { display: flex; justify-content: space-between; width: 46px; margin: 30px auto 0; }
+.eye { width: 9px; height: 12px; background: #1f1f1f; border-radius: 50%; animation: blink 5s infinite; }
+.wm-mouth { width: 22px; height: 10px; border-bottom: 3px solid #7f3010; border-radius: 0 0 20px 20px; margin: 8px auto 0; }
+.wm-body { width: 110px; height: 105px; margin: 0 auto; border-radius: 24px; background: linear-gradient(145deg,#ff7a9f,#f05e8a); border: 2px solid #a63b61; position: relative; }
+.wm-sari { width: 40px; height: 90px; position: absolute; right: 8px; top: 6px; background: linear-gradient(#f7ce56,#e39f00); border-radius: 20px; }
+.wm-arm { width: 18px; height: 62px; border-radius: 20px; background: #f2c28b; position: absolute; top: 24px; }
+.wm-arm-left { left: -10px; }
+.wm-arm-right { right: -8px; }
+.wm-indicator { text-align: center; margin-top: 6px; font-size: 12px; color: #fff; background: rgba(58,60,79,.9); border-radius: 10px; padding: 6px; }
+.wm-panel, .wm-blocker { background: #fff; margin-top: 8px; border-radius: 12px; border: 2px solid #f2ad2e; padding: 10px; box-shadow: 0 8px 20px rgba(0,0,0,.18); }
+.wm-panel h4, .wm-blocker-title { margin: 0 0 6px; font-size: 13px; }
+.wm-actions { display: flex; gap: 6px; }
+.wm-actions button { flex: 1; padding: 7px; border: 0; background: #f2ad2e; color: #1f1f1f; border-radius: 8px; cursor: pointer; font-weight: 600; }
+.hidden { display: none; }
+
+.state-thinking { animation: thinking 1.5s ease-in-out infinite; }
+.state-happy, .state-celebrating { animation: bounce 0.8s ease-in-out infinite; }
+.state-scolding .wm-arm-right { transform-origin: top; animation: wag 0.7s ease-in-out infinite; }
+.state-angry .wm-mouth { width: 20px; border-bottom: 0; border-top: 3px solid #7f3010; }
+.state-proud .wm-arm-right { transform: rotate(-20deg); }
+.state-worried .wm-mouth { border-bottom: 0; border-top: 3px solid #7f3010; border-radius: 12px 12px 0 0; }
+.state-suspicious .wm-eyes { gap: 16px; }
+.state-sleeping .eye { height: 2px; margin-top: 5px; }
+
+@keyframes breathe { 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-4px);} }
+@keyframes blink { 0%,92%,100%{ transform: scaleY(1);} 95%{ transform: scaleY(.1);} }
+@keyframes bounce { 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-10px);} }
+@keyframes wag { 0%,100%{ transform: rotate(6deg);} 50%{ transform: rotate(-22deg);} }
+@keyframes thinking { 0%,100%{ transform: rotate(0);} 50%{ transform: rotate(-8deg);} }

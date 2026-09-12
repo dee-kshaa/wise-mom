@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h3>WISE MOM</h3>
+  <label class="row"><span>Status</span><input id="enabled" type="checkbox" /></label>
+  <div class="card">
+    <div>Today's spending: <b id="today">₹0</b></div>
+    <div>Monthly spending: <b id="month">₹0</b></div>
+    <div>Remaining budget: <b id="remain">₹0</b></div>
+    <div>Recent warning: <b id="warning">None</b></div>
+    <div>Reward eligibility: <b id="reward">No</b></div>
+  </div>
+  <div class="grid">
+    <button id="dashboard">View dashboard</button>
+    <button id="addExpense">Add expense</button>
+    <button id="askMom">Ask Mom</button>
+    <button id="settings">Settings</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
