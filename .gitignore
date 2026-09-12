@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+.env
+*.log
+data/*.db
+hackerrank_submission/code.zip
+hackerrank_submission/log.txt
+hackerrank_submission/output.csv
+hackerrank_submission/mom_mood.csv
+hackerrank_submission/code.zip
+hackerrank_submission/log.txt
