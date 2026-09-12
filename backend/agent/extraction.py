@@ -38,11 +38,14 @@ def extract_information_from_message(text: str) -> dict:
 
 def _resolve_safe_media_path(media_path: str) -> Path | None:
     root = Path(os.getenv("WISE_MOM_MEDIA_ROOT", os.getcwd())).resolve()
-    candidate = Path(media_path).expanduser()
-    if not candidate.is_absolute():
-        candidate = root / candidate
-    resolved = candidate.resolve()
-    if not str(resolved).startswith(str(root)) or not resolved.is_file():
+    media_dir = (root / "data").resolve()
+    raw_name = os.path.basename((media_path or "").strip())
+    if not raw_name or raw_name != (media_path or "").strip():
+        return None
+    if not re.fullmatch(r"[A-Za-z0-9._-]+", raw_name):
+        return None
+    resolved = (media_dir / raw_name).resolve()
+    if resolved.parent != media_dir or not resolved.is_file():
         return None
     return resolved
 
