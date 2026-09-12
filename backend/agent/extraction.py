@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import re
 from pathlib import Path
 
@@ -35,9 +36,20 @@ def extract_information_from_message(text: str) -> dict:
     }
 
 
+def _resolve_safe_media_path(media_path: str) -> Path | None:
+    root = Path(os.getenv("WISE_MOM_MEDIA_ROOT", os.getcwd())).resolve()
+    candidate = Path(media_path).expanduser()
+    if not candidate.is_absolute():
+        candidate = root / candidate
+    resolved = candidate.resolve()
+    if not str(resolved).startswith(str(root)) or not resolved.is_file():
+        return None
+    return resolved
+
+
 def extract_information_from_image(media_path: str) -> dict:
-    path = Path(media_path)
-    if not path.exists():
+    path = _resolve_safe_media_path(media_path)
+    if path is None:
         return {"text": "", "signals": []}
     try:
         import pytesseract
