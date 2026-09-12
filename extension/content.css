@@ -1,0 +1,6 @@
+#wise-mom-shadow-host {
+  all: initial;
+  position: fixed;
+  z-index: 2147483646;
+  pointer-events: none;
+}

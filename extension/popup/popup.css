@@ -1,0 +1,6 @@
+body { width: 280px; margin: 0; padding: 12px; font-family: Inter, Arial; background: #fffaf2; color: #2a2a2a; }
+h3 { margin: 0 0 8px; }
+.row { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.card { background: #fff; border: 1px solid #f1d59a; border-radius: 8px; padding: 8px; font-size: 12px; line-height: 1.5; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 8px; }
+button { border: 0; border-radius: 8px; padding: 8px; background: #f2ad2e; cursor: pointer; font-weight: 600; }
